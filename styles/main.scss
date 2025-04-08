@@ -15,6 +15,10 @@
 
 // Layout
 @use './layout/header';
+@use './layout/mobile-overlay';
 
 // Components
 @use './components/button';
+@use './components/burger-button';
+@use './components/logo';
+@use './components/cross-button';

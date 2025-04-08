@@ -1,0 +1,13 @@
+@use '../abstracts/media';
+
+.logo {
+  &__image {
+    @include media.tablet {
+      max-width: 120px;
+    }
+
+    @include media.mobile {
+      max-width: 144px;
+    }
+  }
+}
