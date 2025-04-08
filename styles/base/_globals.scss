@@ -11,6 +11,13 @@ body {
 }
 
 a,
+input,
+textarea,
+button {
+  cursor: pointer;
+}
+
+a,
 button,
 input,
 textarea,
