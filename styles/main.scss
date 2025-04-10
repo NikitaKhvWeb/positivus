@@ -12,15 +12,20 @@
 @use './base/fonts';
 @use './base/globals';
 @use './base/typography';
+@use './base/section';
+@use './base/grid';
 
 // Layout
 @use './layout/header';
 @use './layout/mobile-overlay';
-@use './layout/section';
 @use './layout/hero';
+@use './layout/services';
 
 // Components
 @use './components/button';
 @use './components/burger-button';
 @use './components/logo';
 @use './components/cross-button';
+@use './components/puddle-bg';
+@use './components/service-card';
+@use './components/banner';

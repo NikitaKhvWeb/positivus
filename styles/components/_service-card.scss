@@ -1,0 +1,70 @@
+@use '../abstracts/mixins';
+@use '../abstracts/media';
+
+.service-card {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  min-height: 310px;
+  padding: 50px;
+  background-color: var(--color-gray);
+  border: var(--border);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow);
+
+  &--accent-bg {
+    background-color: var(--color-accent);
+  }
+
+  &--dark-bg {
+    background-color: var(--color-dark);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 30px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__link {
+    --serviceCardLinkIconColor: var(--color-accent);
+
+    display: inline-flex;
+    align-items: center;
+    column-gap: 15px;
+    font-size: 20px;
+
+    &--light {
+      --serviceCardLinkIconColor: var(--color-dark);
+
+      color: var(--color-light);
+    }
+
+    @include media.hover {
+      opacity: 0.7;
+    }
+
+    &-icon-wrapper {
+      @include mixins.flex-center;
+      @include mixins.square(41px);
+
+      background-color: currentColor;
+      border-radius: 50%;
+
+      svg {
+        color: var(--serviceCardLinkIconColor);
+      }
+    }
+  }
+
+  &__image {
+    align-self: center;
+  }
+}
