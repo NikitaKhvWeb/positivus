@@ -12,6 +12,12 @@
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow);
 
+  @include media.mobile {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 27px;
+  }
+
   &--accent-bg {
     background-color: var(--color-accent);
   }
@@ -25,12 +31,20 @@
     flex-direction: column;
     justify-content: space-between;
     row-gap: 30px;
+
+    @include media.mobile {
+      display: contents;
+    }
   }
 
   &__title {
     display: flex;
     flex-direction: column;
     align-items: start;
+
+    @include media.mobile {
+      grid-column: -1 / 1;
+    }
   }
 
   &__link {
@@ -45,6 +59,10 @@
       --serviceCardLinkIconColor: var(--color-dark);
 
       color: var(--color-light);
+    }
+
+    @include media.mobile {
+      align-self: flex-end;
     }
 
     @include media.hover {
@@ -64,7 +82,22 @@
     }
   }
 
+  &__link-label {
+    @include media.mobile {
+      @include mixins.visually-hidden;
+    }
+  }
+
   &__image {
     align-self: center;
+
+    @include media.desktop {
+      max-width: 50%;
+      height: auto;
+    }
+
+    @include media.mobile {
+      max-width: 165px;
+    }
   }
 }
